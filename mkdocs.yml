@@ -1,0 +1,62 @@
+site_name: WakaTime Client
+site_url: https://Kludex.github.io/wakatime-client
+site_author: Marcelo Trylesinski
+copyright: Copyright &copy; 2025 Marcelo Trylesinski
+
+repo_name: Kludex/wakatime-client
+repo_url: https://github.com/Kludex/wakatime-client
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.indexes
+    - navigation.path
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top # alternatively, we could do navigation.tabs.sticky
+    - toc.follow
+    - toc.integrate
+  font:
+    text: "Ubuntu"
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      primary: red
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: red
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to system preference
+
+nav:
+  - Home: index.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - admonition
+  - codehilite
+  - extra
+  - tables
+  - smarty
+  - pymdownx.tabbed
