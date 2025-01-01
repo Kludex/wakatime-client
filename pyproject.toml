@@ -5,7 +5,7 @@ build-backend = 'hatchling.build'
 [project]
 name = "wakatime-client"
 description = "An awesome package is coming soon! 🎉"
-version = "0.3.0"
+version = "0.3.1"
 readme = "README.md"
 authors = [{ name = "Marcelo Trylesinski", email = "marcelotryle@gmail.com" }]
 classifiers = [

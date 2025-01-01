@@ -167,6 +167,10 @@ class WakatimeClient:
 
 
 class Stats(TypedDict):
+    data: StatsData
+
+
+class StatsData(TypedDict):
     id: Any
     user_id: Any
     range: Any
