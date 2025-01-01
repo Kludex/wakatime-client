@@ -1,11 +1,9 @@
 from __future__ import annotations
 
-import os
 from datetime import date
 from typing import Any, Literal, TypeAlias
 
 import httpx
-from rich.pretty import pprint
 
 Year: TypeAlias = str
 """YYYY format for year."""
@@ -166,7 +164,3 @@ class WakatimeClient:
         response = self.client.get(f"/users/{user}/summaries", params=params)
         response.raise_for_status()
         return response.json()
-
-
-client = WakatimeClient(api_key=os.getenv("WAKATIME_API_KEY"))
-pprint(client.stats(range="last_30_days"), indent_guides=False)

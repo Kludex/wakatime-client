@@ -24,10 +24,7 @@ classifiers = [
 ]
 license = "MIT"
 requires-python = ">=3.8"
-dependencies = [
-    "httpx>=0.28.1",
-    "rich>=13.9.4",
-]
+dependencies = ["httpx>=0.28.1"]
 optional-dependencies = {}
 
 [project.urls]
@@ -36,8 +33,8 @@ Source = "https://github.com/Kludex/wakatime-client"
 Twitter = "https://twitter.com/marcelotryle"
 Funding = "https://github.com/sponsors/Kludex"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "ruff",
     "mypy",
     "pre-commit",
@@ -46,8 +43,12 @@ dev-dependencies = [
     "pytest",
     "pytest-sugar",
     "dirty-equals",
-    "inline-snapshot"
+    "inline-snapshot",
 ]
+docs = ["mkdocs", "mkdocs-material"]
+
+[tool.uv]
+default-groups = ["dev", "docs"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -70,7 +71,7 @@ select = [
     "UP",     # https://docs.astral.sh/ruff/rules/#pyupgrade-up
     "RUF100", # https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
 ]
-isort = { combine-as-imports = true , split-on-trailing-comma = false }
+isort = { combine-as-imports = true, split-on-trailing-comma = false }
 
 [tool.ruff.format]
 docstring-code-format = true
